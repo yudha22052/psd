@@ -1,0 +1,2035 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Oil Import Prediction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'TerbaruTugas2';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Prediction Suhu Udara" href="TerbaruTugas3_2.html" />
+    <link rel="prev" title="Prediksi Pengunjung" href="TerbaruTugas1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas1.html">Prediksi Pengunjung</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Oil Import Prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas3_2.html">Prediction Suhu Udara</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FTerbaruTugas2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/TerbaruTugas2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Oil Import Prediction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset">Memuat dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-extract-date-information">Preprocessing: Extract Date Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu">Membuat grafik time series untuk menunjukkan tren impor minyak dari waktu ke waktu.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis">Mengambil kolom nilai impor minyak dalam bentuk array numpy untuk digunakan dalam analisis.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">normalisasi data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oil-import-prediction">
+<h1>Oil Import Prediction<a class="headerlink" href="#oil-import-prediction" title="Link to this heading">#</a></h1>
+<p>Nama: Yudha nuur cahyo</p>
+<p>NIM: 220411100052</p>
+<p>Mata Kuliah: Proyek sains Data</p>
+<p>Notebook ini berisi proses analisis data time series untuk memprediksi impor minyak dunia ke Amerika Serikat menggunakan model Bagging Regressor dengan Linear Regression sebagai estimasi dasar. Proses dimulai dengan mengimpor pustaka yang dibutuhkan seperti numpy, pandas, matplotlib, dan sklearn, diikuti dengan membaca dataset impor minyak.</p>
+<p>Langkah berikutnya adalah melakukan preprocessing data dengan mengonversi kolom tanggal ke format datetime, menambahkan kolom tahun dan bulan, serta memvisualisasikan data time series untuk memahami pola tren. Data kemudian diolah menggunakan metode sliding window untuk membentuk data input (X) dan target (y), di mana 4 data terakhir digunakan untuk memprediksi data berikutnya.</p>
+<p>Selanjutnya, data dinormalisasi menggunakan MinMaxScaler untuk memastikan nilai berada dalam rentang 0 hingga 1. Model dilatih menggunakan Bagging Regressor dengan Linear Regression sebagai estimator dasar, dan dilakukan evaluasi terhadap model menggunakan metrik seperti Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan Mean Absolute Percentage Error (MAPE).</p>
+<p>Hasil prediksi dibandingkan dengan data aktual untuk menilai performa model, dan visualisasi dibuat untuk membantu memahami hasil prediksi. Notebook ini memberikan gambaran lengkap mengenai pengolahan data, pelatihan model, evaluasi, dan prediksi dalam konteks analisis time series.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="memuat-dataset">
+<h2>Memuat dataset<a class="headerlink" href="#memuat-dataset" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">&lt;ipython-input-2-eea40637b52e&gt;</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pickle</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, readonly)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">def</span> <span class="nf">mount</span><span class="p">(</span><span class="n">mountpoint</span><span class="p">,</span> <span class="n">force_remount</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">120000</span><span class="p">,</span> <span class="n">readonly</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span><span class="w">   </span><span class="sd">&quot;&quot;&quot;Mount your Google Drive at the specified mountpoint path.&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">100</span>   <span class="k">return</span> <span class="n">_mount</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>       <span class="n">mountpoint</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>       <span class="n">force_remount</span><span class="o">=</span><span class="n">force_remount</span><span class="p">,</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/drive.py</span> in <span class="ni">_mount</span><span class="nt">(mountpoint, force_remount, timeout_ms, ephemeral, readonly)</span>
+<span class="g g-Whitespace">    </span><span class="mi">135</span>   <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span>   <span class="k">if</span> <span class="n">ephemeral</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="n">_message</span><span class="o">.</span><span class="n">blocking_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span>         <span class="s1">&#39;request_auth&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span>         <span class="n">request</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;authType&#39;</span><span class="p">:</span> <span class="s1">&#39;dfs_ephemeral&#39;</span><span class="p">},</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">blocking_request</span><span class="nt">(request_type, request, timeout_sec, parent)</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span>       <span class="n">request_type</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">expect_reply</span><span class="o">=</span><span class="kc">True</span>
+<span class="g g-Whitespace">    </span><span class="mi">175</span>   <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">176</span>   <span class="k">return</span> <span class="n">read_reply_from_input</span><span class="p">(</span><span class="n">request_id</span><span class="p">,</span> <span class="n">timeout_sec</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.10/dist-packages/google/colab/_message.py</span> in <span class="ni">read_reply_from_input</span><span class="nt">(message_id, timeout_sec)</span>
+<span class="g g-Whitespace">     </span><span class="mi">94</span>     <span class="n">reply</span> <span class="o">=</span> <span class="n">_read_next_input_message</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">95</span>     <span class="k">if</span> <span class="n">reply</span> <span class="o">==</span> <span class="n">_NOT_READY</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">reply</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">96</span>       <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.025</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">97</span>       <span class="k">continue</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span>     <span class="k">if</span> <span class="p">(</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/My Drive/psd/tugas/dataset/Imports Oil.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-973ef19c-5252-49db-8bb7-42aa008f3ad1" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Date and Month</th>
+      <th>Crude oil imports from the World to the US (a thousand barrels)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2009 01</td>
+      <td>317275</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2009 02</td>
+      <td>262339</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2009 03</td>
+      <td>303897</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2009 04</td>
+      <td>285934</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2009 05</td>
+      <td>281147</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>2020 09</td>
+      <td>161926</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>2020 10</td>
+      <td>164494</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>2020 11</td>
+      <td>168655</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>2020 12</td>
+      <td>178597</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>2021 01</td>
+      <td>181197</td>
+    </tr>
+  </tbody>
+</table>
+<p>145 rows × 2 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-973ef19c-5252-49db-8bb7-42aa008f3ad1')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-973ef19c-5252-49db-8bb7-42aa008f3ad1 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-973ef19c-5252-49db-8bb7-42aa008f3ad1');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea">
+  <button class="colab-df-quickchart" onclick="quickchart('df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+  <div id="id_73e0c051-5c02-40a0-965a-d7ed69416d40">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('data')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_73e0c051-5c02-40a0-965a-d7ed69416d40 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('data');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="preprocessing-extract-date-information">
+<h2>Preprocessing: Extract Date Information<a class="headerlink" href="#preprocessing-extract-date-information" title="Link to this heading">#</a></h2>
+</section>
+<section id="mengubah-kolom-date-and-month-menjadi-format-datetime">
+<h2>Mengubah kolom Date and Month menjadi format datetime.<a class="headerlink" href="#mengubah-kolom-date-and-month-menjadi-format-datetime" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocessing</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date and Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date and Month&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date and Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date and Month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-6-01c4818ce047&gt;:2: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  data[&#39;Date and Month&#39;] = pd.to_datetime(data[&#39;Date and Month&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                      Date and Month  \
+count                            145   
+mean   2014-12-31 10:25:39.310344704   
+min              2009-01-01 00:00:00   
+25%              2012-01-01 00:00:00   
+50%              2015-01-01 00:00:00   
+75%              2018-01-01 00:00:00   
+max              2021-01-01 00:00:00   
+std                              NaN   
+
+       Crude oil imports from the World to the US (a thousand barrels)  \
+count                                         145.000000                 
+mean                                       240900.606897                 
+min                                        161926.000000                 
+25%                                        221130.000000                 
+50%                                        239212.000000                 
+75%                                        265615.000000                 
+max                                        318991.000000                 
+std                                         34409.783380                 
+
+              Year       Month  
+count   145.000000  145.000000  
+mean   2014.544828    6.462069  
+min    2009.000000    1.000000  
+25%    2012.000000    3.000000  
+50%    2015.000000    6.000000  
+75%    2018.000000    9.000000  
+max    2021.000000   12.000000  
+std       3.494001    3.482138  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Menampilkan statistik deskriptif seperti rata-rata, nilai minimum, maksimum, dll., untuk kolom numerik dalam DataFrame.</p>
+<section id="menghitung-jumlah-nilai-kosong">
+<h3>Menghitung jumlah nilai kosong<a class="headerlink" href="#menghitung-jumlah-nilai-kosong" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Date and Month                                                     0
+Crude oil imports from the World to the US (a thousand barrels)    0
+Year                                                               0
+Month                                                              0
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu">
+<h3>Membuat grafik time series untuk menunjukkan tren impor minyak dari waktu ke waktu.<a class="headerlink" href="#membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Visualisasi data time series</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date and Month&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Crude oil imports from the World to the US (a thousand barrels)&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot Time Series&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Waktu&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Nilai&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/febc57cd2a02741619eee096ed1e723ba9edea5de6cdf84bfdd4354fe348735b.png" src="_images/febc57cd2a02741619eee096ed1e723ba9edea5de6cdf84bfdd4354fe348735b.png" />
+</div>
+</div>
+</section>
+<section id="mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis">
+<h3>Mengambil kolom nilai impor minyak dalam bentuk array numpy untuk digunakan dalam analisis.<a class="headerlink" href="#mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mengambil kolom harga dan mengubahnya menjadi array numpy</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Crude oil imports from the World to the US (a thousand barrels)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[317275 262339 303897 285934 281147 284093 287569 279111 289561 272678
+ 273248 265615 274568 253150 299033 302836 310396 310153 318991 309053
+ 284192 272415 271185 279096 296158 235122 292010 265822 289106 285572
+ 295338 287633 273698 284594 268189 279359 257536 242560 271697 258417
+ 272766 270684 266782 263945 250160 250303 244987 235120 245715 203162
+ 231414 231621 238809 231912 245724 251079 237699 230822 222248 240519
+ 234969 201572 225487 226639 222177 212025 236534 231649 224851 221600
+ 218845 223978 222315 198807 235360 216229 224604 219618 228160 239212
+ 216838 220171 221130 244965 236065 229492 248383 228344 245749 226802
+ 250986 248482 241213 234666 240691 242213 262811 220558 253114 246132
+ 264554 242677 245369 245611 219708 238109 230230 241245 248552 209942
+ 236216 247608 242857 254283 246671 247656 227795 227975 226251 219240
+ 234307 178257 210276 209958 221259 214563 215083 215273 194485 193493
+ 174531 211837 198663 189060 195181 165586 188693 191919 183087 168406
+ 161926 164494 168655 178597 181197]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="melakukan-sliding-window">
+<h3>melakukan sliding window<a class="headerlink" href="#melakukan-sliding-window" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sliding_window</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">):</span>
+        <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">window_size</span><span class="p">])</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">window_size</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">window_size</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Ukuran jendela =3</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sliding_window</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X:&quot;</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X: [[317275 262339 303897 285934]
+ [262339 303897 285934 281147]
+ [303897 285934 281147 284093]
+ [285934 281147 284093 287569]
+ [281147 284093 287569 279111]
+ [284093 287569 279111 289561]
+ [287569 279111 289561 272678]
+ [279111 289561 272678 273248]
+ [289561 272678 273248 265615]
+ [272678 273248 265615 274568]
+ [273248 265615 274568 253150]
+ [265615 274568 253150 299033]
+ [274568 253150 299033 302836]
+ [253150 299033 302836 310396]
+ [299033 302836 310396 310153]
+ [302836 310396 310153 318991]
+ [310396 310153 318991 309053]
+ [310153 318991 309053 284192]
+ [318991 309053 284192 272415]
+ [309053 284192 272415 271185]
+ [284192 272415 271185 279096]
+ [272415 271185 279096 296158]
+ [271185 279096 296158 235122]
+ [279096 296158 235122 292010]
+ [296158 235122 292010 265822]
+ [235122 292010 265822 289106]
+ [292010 265822 289106 285572]
+ [265822 289106 285572 295338]
+ [289106 285572 295338 287633]
+ [285572 295338 287633 273698]
+ [295338 287633 273698 284594]
+ [287633 273698 284594 268189]
+ [273698 284594 268189 279359]
+ [284594 268189 279359 257536]
+ [268189 279359 257536 242560]
+ [279359 257536 242560 271697]
+ [257536 242560 271697 258417]
+ [242560 271697 258417 272766]
+ [271697 258417 272766 270684]
+ [258417 272766 270684 266782]
+ [272766 270684 266782 263945]
+ [270684 266782 263945 250160]
+ [266782 263945 250160 250303]
+ [263945 250160 250303 244987]
+ [250160 250303 244987 235120]
+ [250303 244987 235120 245715]
+ [244987 235120 245715 203162]
+ [235120 245715 203162 231414]
+ [245715 203162 231414 231621]
+ [203162 231414 231621 238809]
+ [231414 231621 238809 231912]
+ [231621 238809 231912 245724]
+ [238809 231912 245724 251079]
+ [231912 245724 251079 237699]
+ [245724 251079 237699 230822]
+ [251079 237699 230822 222248]
+ [237699 230822 222248 240519]
+ [230822 222248 240519 234969]
+ [222248 240519 234969 201572]
+ [240519 234969 201572 225487]
+ [234969 201572 225487 226639]
+ [201572 225487 226639 222177]
+ [225487 226639 222177 212025]
+ [226639 222177 212025 236534]
+ [222177 212025 236534 231649]
+ [212025 236534 231649 224851]
+ [236534 231649 224851 221600]
+ [231649 224851 221600 218845]
+ [224851 221600 218845 223978]
+ [221600 218845 223978 222315]
+ [218845 223978 222315 198807]
+ [223978 222315 198807 235360]
+ [222315 198807 235360 216229]
+ [198807 235360 216229 224604]
+ [235360 216229 224604 219618]
+ [216229 224604 219618 228160]
+ [224604 219618 228160 239212]
+ [219618 228160 239212 216838]
+ [228160 239212 216838 220171]
+ [239212 216838 220171 221130]
+ [216838 220171 221130 244965]
+ [220171 221130 244965 236065]
+ [221130 244965 236065 229492]
+ [244965 236065 229492 248383]
+ [236065 229492 248383 228344]
+ [229492 248383 228344 245749]
+ [248383 228344 245749 226802]
+ [228344 245749 226802 250986]
+ [245749 226802 250986 248482]
+ [226802 250986 248482 241213]
+ [250986 248482 241213 234666]
+ [248482 241213 234666 240691]
+ [241213 234666 240691 242213]
+ [234666 240691 242213 262811]
+ [240691 242213 262811 220558]
+ [242213 262811 220558 253114]
+ [262811 220558 253114 246132]
+ [220558 253114 246132 264554]
+ [253114 246132 264554 242677]
+ [246132 264554 242677 245369]
+ [264554 242677 245369 245611]
+ [242677 245369 245611 219708]
+ [245369 245611 219708 238109]
+ [245611 219708 238109 230230]
+ [219708 238109 230230 241245]
+ [238109 230230 241245 248552]
+ [230230 241245 248552 209942]
+ [241245 248552 209942 236216]
+ [248552 209942 236216 247608]
+ [209942 236216 247608 242857]
+ [236216 247608 242857 254283]
+ [247608 242857 254283 246671]
+ [242857 254283 246671 247656]
+ [254283 246671 247656 227795]
+ [246671 247656 227795 227975]
+ [247656 227795 227975 226251]
+ [227795 227975 226251 219240]
+ [227975 226251 219240 234307]
+ [226251 219240 234307 178257]
+ [219240 234307 178257 210276]
+ [234307 178257 210276 209958]
+ [178257 210276 209958 221259]
+ [210276 209958 221259 214563]
+ [209958 221259 214563 215083]
+ [221259 214563 215083 215273]
+ [214563 215083 215273 194485]
+ [215083 215273 194485 193493]
+ [215273 194485 193493 174531]
+ [194485 193493 174531 211837]
+ [193493 174531 211837 198663]
+ [174531 211837 198663 189060]
+ [211837 198663 189060 195181]
+ [198663 189060 195181 165586]
+ [189060 195181 165586 188693]
+ [195181 165586 188693 191919]
+ [165586 188693 191919 183087]
+ [188693 191919 183087 168406]
+ [191919 183087 168406 161926]
+ [183087 168406 161926 164494]
+ [168406 161926 164494 168655]
+ [161926 164494 168655 178597]]
+y: [281147 284093 287569 279111 289561 272678 273248 265615 274568 253150
+ 299033 302836 310396 310153 318991 309053 284192 272415 271185 279096
+ 296158 235122 292010 265822 289106 285572 295338 287633 273698 284594
+ 268189 279359 257536 242560 271697 258417 272766 270684 266782 263945
+ 250160 250303 244987 235120 245715 203162 231414 231621 238809 231912
+ 245724 251079 237699 230822 222248 240519 234969 201572 225487 226639
+ 222177 212025 236534 231649 224851 221600 218845 223978 222315 198807
+ 235360 216229 224604 219618 228160 239212 216838 220171 221130 244965
+ 236065 229492 248383 228344 245749 226802 250986 248482 241213 234666
+ 240691 242213 262811 220558 253114 246132 264554 242677 245369 245611
+ 219708 238109 230230 241245 248552 209942 236216 247608 242857 254283
+ 246671 247656 227795 227975 226251 219240 234307 178257 210276 209958
+ 221259 214563 215083 215273 194485 193493 174531 211837 198663 189060
+ 195181 165586 188693 191919 183087 168406 161926 164494 168655 178597
+ 181197]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mendefinisikan fungsi sliding_window untuk membuat data input (X) dan target (y) menggunakan metode jendela geser.</p>
+</section>
+<section id="normalisasi-data">
+<h3>normalisasi data<a class="headerlink" href="#normalisasi-data" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sliding_window</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
+
+<span class="c1"># Normalisasi data</span>
+<span class="n">scaler_X</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+<span class="n">scaler_y</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">()</span>
+
+<span class="c1"># Lakukan fit dan transformasi pada X dan y</span>
+<span class="n">X_normalized</span> <span class="o">=</span> <span class="n">scaler_X</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">y_normalized</span> <span class="o">=</span> <span class="n">scaler_y</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X setelah normalisasi:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">X_normalized</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y setelah normalisasi:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y_normalized</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X setelah normalisasi:
+ [[0.98907459 0.63930857 0.90389966 0.789533  ]
+ [0.63930857 0.90389966 0.789533   0.75905517]
+ [0.90389966 0.789533   0.75905517 0.77781173]
+ [0.789533   0.75905517 0.77781173 0.7999427 ]
+ [0.75905517 0.77781173 0.7999427  0.74609238]
+ [0.77781173 0.7999427  0.74609238 0.81262535]
+ [0.7999427  0.74609238 0.81262535 0.70513482]
+ [0.74609238 0.81262535 0.70513482 0.70876389]
+ [0.81262535 0.70513482 0.70876389 0.66016617]
+ [0.70513482 0.70876389 0.66016617 0.71716805]
+ [0.70876389 0.66016617 0.71716805 0.58080413]
+ [0.66016617 0.71716805 0.58080413 0.87293159]
+ [0.71716805 0.58080413 0.87293159 0.89714449]
+ [0.58080413 0.87293159 0.89714449 0.94527743]
+ [0.87293159 0.89714449 0.94527743 0.9437303 ]
+ [0.89714449 0.94527743 0.9437303  1.        ]
+ [0.94527743 0.9437303  1.         0.93672683]
+ [0.9437303  1.         0.93672683 0.77844205]
+ [1.         0.93672683 0.77844205 0.70346035]
+ [0.93672683 0.77844205 0.70346035 0.6956292 ]
+ [0.77844205 0.70346035 0.6956292  0.74599688]
+ [0.70346035 0.6956292  0.74599688 0.85462707]
+ [0.6956292  0.74599688 0.85462707 0.46602362]
+ [0.74599688 0.85462707 0.46602362 0.82821762]
+ [0.85462707 0.46602362 0.82821762 0.6614841 ]
+ [0.46602362 0.82821762 0.6614841  0.80972846]
+ [0.82821762 0.6614841  0.80972846 0.78722822]
+ [0.6614841  0.80972846 0.78722822 0.8494063 ]
+ [0.80972846 0.78722822 0.8494063  0.80035017]
+ [0.78722822 0.8494063  0.80035017 0.71162894]
+ [0.8494063  0.80035017 0.71162894 0.7810015 ]
+ [0.80035017 0.71162894 0.7810015  0.67655429]
+ [0.71162894 0.7810015  0.67655429 0.74767135]
+ [0.7810015  0.67655429 0.74767135 0.60872887]
+ [0.67655429 0.74767135 0.60872887 0.51337981]
+ [0.74767135 0.60872887 0.51337981 0.698889  ]
+ [0.60872887 0.51337981 0.698889   0.61433801]
+ [0.51337981 0.698889   0.61433801 0.70569509]
+ [0.698889   0.61433801 0.70569509 0.69243944]
+ [0.61433801 0.70569509 0.69243944 0.66759622]
+ [0.70569509 0.69243944 0.66759622 0.64953363]
+ [0.69243944 0.66759622 0.64953363 0.56176742]
+ [0.66759622 0.64953363 0.56176742 0.56267787]
+ [0.64953363 0.56176742 0.56267787 0.52883201]
+ [0.56176742 0.56267787 0.52883201 0.46601089]
+ [0.56267787 0.52883201 0.46601089 0.53346704]
+ [0.52883201 0.46601089 0.53346704 0.26254099]
+ [0.46601089 0.53346704 0.26254099 0.44241556]
+ [0.53346704 0.26254099 0.44241556 0.44373349]
+ [0.26254099 0.44241556 0.44373349 0.48949798]
+ [0.44241556 0.44373349 0.48949798 0.44558622]
+ [0.44373349 0.48949798 0.44558622 0.53352434]
+ [0.48949798 0.44558622 0.53352434 0.5676185 ]
+ [0.44558622 0.53352434 0.5676185  0.48243084]
+ [0.53352434 0.5676185  0.48243084 0.43864642]
+ [0.5676185  0.48243084 0.43864642 0.38405756]
+ [0.48243084 0.43864642 0.38405756 0.50038519]
+ [0.43864642 0.38405756 0.50038519 0.4650495 ]
+ [0.38405756 0.50038519 0.4650495  0.25241779]
+ [0.50038519 0.4650495  0.25241779 0.40467959]
+ [0.4650495  0.25241779 0.40467959 0.41201413]
+ [0.25241779 0.40467959 0.41201413 0.38360551]
+ [0.40467959 0.41201413 0.38360551 0.31896985]
+ [0.41201413 0.38360551 0.31896985 0.47501353]
+ [0.38360551 0.31896985 0.47501353 0.44391176]
+ [0.31896985 0.47501353 0.44391176 0.40063031]
+ [0.47501353 0.44391176 0.40063031 0.37993188]
+ [0.44391176 0.40063031 0.37993188 0.36239137]
+ [0.40063031 0.37993188 0.36239137 0.3950721 ]
+ [0.37993188 0.36239137 0.3950721  0.38448413]
+ [0.36239137 0.3950721  0.38448413 0.23481361]
+ [0.3950721  0.38448413 0.23481361 0.46753892]
+ [0.38448413 0.23481361 0.46753892 0.34573584]
+ [0.23481361 0.46753892 0.34573584 0.39905771]
+ [0.46753892 0.34573584 0.39905771 0.3673129 ]
+ [0.34573584 0.39905771 0.3673129  0.42169802]
+ [0.39905771 0.3673129  0.42169802 0.4920638 ]
+ [0.3673129  0.42169802 0.4920638  0.34961322]
+ [0.42169802 0.4920638  0.34961322 0.37083373]
+ [0.4920638  0.34961322 0.37083373 0.37693948]
+ [0.34961322 0.37083373 0.37693948 0.52869194]
+ [0.37083373 0.37693948 0.52869194 0.4720275 ]
+ [0.37693948 0.52869194 0.4720275  0.43017859]
+ [0.52869194 0.4720275  0.43017859 0.55045363]
+ [0.4720275  0.43017859 0.55045363 0.42286951]
+ [0.43017859 0.55045363 0.42286951 0.53368351]
+ [0.55045363 0.42286951 0.53368351 0.41305192]
+ [0.42286951 0.53368351 0.41305192 0.56702639]
+ [0.53368351 0.41305192 0.56702639 0.55108395]
+ [0.41305192 0.56702639 0.55108395 0.50480374]
+ [0.56702639 0.55108395 0.50480374 0.46312036]
+ [0.55108395 0.50480374 0.46312036 0.50148028]
+ [0.50480374 0.46312036 0.50148028 0.51117053]
+ [0.46312036 0.50148028 0.51117053 0.64231369]
+ [0.50148028 0.51117053 0.64231369 0.37329768]
+ [0.51117053 0.64231369 0.37329768 0.58057492]
+ [0.64231369 0.37329768 0.58057492 0.53612199]
+ [0.37329768 0.58057492 0.53612199 0.65341101]
+ [0.58057492 0.53612199 0.65341101 0.51412473]
+ [0.53612199 0.65341101 0.51412473 0.53126413]
+ [0.65341101 0.51412473 0.53126413 0.53280489]
+ [0.51412473 0.53126413 0.53280489 0.36788591]
+ [0.53126413 0.53280489 0.36788591 0.48504122]
+ [0.53280489 0.36788591 0.48504122 0.43487728]
+ [0.36788591 0.48504122 0.43487728 0.50500748]
+ [0.48504122 0.43487728 0.50500748 0.55152962]
+ [0.43487728 0.50500748 0.55152962 0.30570783]
+ [0.50500748 0.55152962 0.30570783 0.47298889]
+ [0.55152962 0.30570783 0.47298889 0.54551937]
+ [0.30570783 0.47298889 0.54551937 0.51527075]
+ [0.47298889 0.54551937 0.51527075 0.5880177 ]
+ [0.54551937 0.51527075 0.5880177  0.53955369]
+ [0.51527075 0.5880177  0.53955369 0.54582498]
+ [0.5880177  0.53955369 0.54582498 0.41937414]
+ [0.53955369 0.54582498 0.41937414 0.42052017]
+ [0.54582498 0.41937414 0.42052017 0.40954382]
+ [0.41937414 0.42052017 0.40954382 0.36490625]
+ [0.42052017 0.40954382 0.36490625 0.46083469]
+ [0.40954382 0.36490625 0.46083469 0.10397606]
+ [0.36490625 0.46083469 0.10397606 0.30783434]
+ [0.46083469 0.10397606 0.30783434 0.3058097 ]
+ [0.10397606 0.30783434 0.3058097  0.3777608 ]
+ [0.30783434 0.3058097  0.3777608  0.33512877]
+ [0.3058097  0.3777608  0.33512877 0.3384395 ]
+ [0.3777608  0.33512877 0.3384395  0.33964919]
+ [0.33512877 0.3384395  0.33964919 0.20729634]
+ [0.3384395  0.33964919 0.20729634 0.20098049]
+ [0.33964919 0.20729634 0.20098049 0.0802534 ]
+ [0.20729634 0.20098049 0.0802534  0.3177729 ]
+ [0.20098049 0.0802534  0.3177729  0.23389679]
+ [0.0802534  0.3177729  0.23389679 0.1727565 ]
+ [0.3177729  0.23389679 0.1727565  0.21172763]
+ [0.23389679 0.1727565  0.21172763 0.02330245]
+ [0.1727565  0.21172763 0.02330245 0.17041989]
+ [0.21172763 0.02330245 0.17041989 0.19095916]
+ [0.02330245 0.17041989 0.19095916 0.13472766]
+ [0.17041989 0.19095916 0.13472766 0.0412568 ]
+ [0.19095916 0.13472766 0.0412568  0.        ]
+ [0.13472766 0.0412568  0.         0.01634992]
+ [0.0412568  0.         0.01634992 0.04284214]
+ [0.         0.01634992 0.04284214 0.10614077]]
+y setelah normalisasi:
+ [0.75905517 0.77781173 0.7999427  0.74609238 0.81262535 0.70513482
+ 0.70876389 0.66016617 0.71716805 0.58080413 0.87293159 0.89714449
+ 0.94527743 0.9437303  1.         0.93672683 0.77844205 0.70346035
+ 0.6956292  0.74599688 0.85462707 0.46602362 0.82821762 0.6614841
+ 0.80972846 0.78722822 0.8494063  0.80035017 0.71162894 0.7810015
+ 0.67655429 0.74767135 0.60872887 0.51337981 0.698889   0.61433801
+ 0.70569509 0.69243944 0.66759622 0.64953363 0.56176742 0.56267787
+ 0.52883201 0.46601089 0.53346704 0.26254099 0.44241556 0.44373349
+ 0.48949798 0.44558622 0.53352434 0.5676185  0.48243084 0.43864642
+ 0.38405756 0.50038519 0.4650495  0.25241779 0.40467959 0.41201413
+ 0.38360551 0.31896985 0.47501353 0.44391176 0.40063031 0.37993188
+ 0.36239137 0.3950721  0.38448413 0.23481361 0.46753892 0.34573584
+ 0.39905771 0.3673129  0.42169802 0.4920638  0.34961322 0.37083373
+ 0.37693948 0.52869194 0.4720275  0.43017859 0.55045363 0.42286951
+ 0.53368351 0.41305192 0.56702639 0.55108395 0.50480374 0.46312036
+ 0.50148028 0.51117053 0.64231369 0.37329768 0.58057492 0.53612199
+ 0.65341101 0.51412473 0.53126413 0.53280489 0.36788591 0.48504122
+ 0.43487728 0.50500748 0.55152962 0.30570783 0.47298889 0.54551937
+ 0.51527075 0.5880177  0.53955369 0.54582498 0.41937414 0.42052017
+ 0.40954382 0.36490625 0.46083469 0.10397606 0.30783434 0.3058097
+ 0.3777608  0.33512877 0.3384395  0.33964919 0.20729634 0.20098049
+ 0.0802534  0.3177729  0.23389679 0.1727565  0.21172763 0.02330245
+ 0.17041989 0.19095916 0.13472766 0.0412568  0.         0.01634992
+ 0.04284214 0.10614077 0.12269443]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Menggunakan MinMaxScaler untuk normalisasi data agar berada dalam rentang 0-1.</p></li>
+<li><p>Normalisasi dilakukan pada data input (X) dan target (y).</p></li>
+</ul>
+</section>
+<section id="membagi-data-menjadi-set-latih-dan-uji">
+<h3>Membagi data menjadi set latih dan uji<a class="headerlink" href="#membagi-data-menjadi-set-latih-dan-uji" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Bagi data menjadi data latih dan uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi model Linear Regression sebagai estimator</span>
+<span class="n">base_estimator</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># Membuat model Bagging Regressor dengan Linear Regression sebagai estimator</span>
+<span class="c1"># Use &#39;estimator&#39; instead of &#39;base_estimator&#39; for older versions of scikit-learn</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">BaggingRegressor</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">base_estimator</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Melatih model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># Melakukan prediksi</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Mengukur performa model</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean Squared Error (MSE):&quot;</span><span class="p">,</span> <span class="n">mse</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediksi:&quot;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean Squared Error (MSE): 248950101.55948818
+Prediksi: [220957.29923959 235881.2075715  272571.19062021 235458.19489098
+ 237182.19792772 174388.75422306 231842.92780407 230925.10396024
+ 189730.11598214 285106.44453365 281019.10545697 239256.38211118
+ 272045.53383377 239573.71440915 246539.46904704 170104.78480801
+ 279136.75807898 182875.28435362 267681.97831034 209005.28337935
+ 221510.95796296 241138.53423862 201849.79357889 238326.40799589
+ 224916.8100163  277706.40634581 222940.41866685 250421.9659555
+ 245246.04728163]
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Membagi data menjadi set latih dan uji (80%-20%).</p></li>
+<li><p>Melatih model BaggingRegressor dengan LinearRegression sebagai estimasi dasar.</p></li>
+<li><p>Mengukur kinerja model menggunakan Mean Squared Error (MSE).</p></li>
+</ul>
+</section>
+<section id="melatih-model-baggingregressor">
+<h3>Melatih model BaggingRegressor<a class="headerlink" href="#melatih-model-baggingregressor" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mmenggunakan linearRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="n">linear</span><span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">bagging_model3</span> <span class="o">=</span> <span class="n">BaggingRegressor</span><span class="p">(</span><span class="n">estimator</span><span class="o">=</span><span class="n">linear</span><span class="p">,</span> <span class="n">n_estimators</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Melatih model pada data</span>
+<span class="n">bagging_model3</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>#sk-container-id-1 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: black;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-1 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-1 pre {
+  padding: 0;
+}
+
+#sk-container-id-1 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-1 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-1 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-1 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-1 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-1 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-1 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-1 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-1 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-1 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-1 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-1 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-1 label.sk-toggleable__label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#sk-container-id-1 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-1 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-1 div.sk-label label.sk-toggleable__label,
+#sk-container-id-1 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-1 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-1 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-1 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-1 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-1 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-1 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 1ex;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-1 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-1 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-1 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-1 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>BaggingRegressor(estimator=LinearRegression(), random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;BaggingRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.ensemble.BaggingRegressor.html">?<span>Documentation for BaggingRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>BaggingRegressor(estimator=LinearRegression(), random_state=42)</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">estimator: LinearRegression</label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;LinearRegression<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a></label><div class="sk-toggleable__content fitted"><pre>LinearRegression()</pre></div> </div></div></div></div></div></div></div></div></div></div></div>
+</div>
+</section>
+</section>
+<section id="melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">
+<h2>melakukan uji coba pada model yang di latih untuk melakukan prediksi<a class="headerlink" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred3</span> <span class="o">=</span> <span class="n">bagging_model3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># Prediksi pada data training untuk menghitung RMSE</span>
+<span class="n">rmse3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RMSE:&quot;</span><span class="p">,</span> <span class="n">rmse3</span><span class="p">)</span>
+
+<span class="c1"># Menghitung MAPE</span>
+<span class="n">mape3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_pred3</span><span class="p">)</span> <span class="o">/</span> <span class="n">y</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Menampilkan MAPE dalam bentuk persen dengan 2 desimal</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MAPE: </span><span class="si">{</span><span class="n">mape3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RMSE: 14712.61894889046
+MAPE: 4.87%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data input untuk prediksi (minggu ke-39 sampai ke-41)</span>
+<span class="c1"># Adjust the window size to match the training data</span>
+<span class="c1"># new_data = np.array([prices[-2:]])  # Mengambil 4 minggu terakhir untuk konsistensi fitur</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">prices</span><span class="p">[</span><span class="o">-</span><span class="n">window_size</span><span class="p">:]])</span> <span class="c1"># Mengambil 4 data terakhir untuk konsistensi fitur, sesuai dengan window_size yang digunakan saat training</span>
+
+<span class="c1"># Prediksi</span>
+<span class="n">predicted_price3</span> <span class="o">=</span> <span class="n">bagging_model3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">new_data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="c1"># Reshape new_data to have the correct dimensions (1 sample, 4 features)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediksi menggunakan linear regression :&quot;</span><span class="p">,</span> <span class="n">predicted_price3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prediksi menggunakan linear regression : [179059.57986068]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 6. Visualisasi Hasil (Opsional)</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Harga Asli&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred3</span><span class="p">)),</span> <span class="n">y_pred3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prediksi&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Indeks Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Harga Bawang Merah&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Harga Asli dan Prediksi menggunakan Linear regression&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/823e410c653cc7e17039869aac152723ead7606b71009c115a748402e35addf4.png" src="_images/823e410c653cc7e17039869aac152723ead7606b71009c115a748402e35addf4.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+
+<span class="c1"># Misalnya model prediksi Anda bernama &#39;model&#39; dan telah dilatih</span>
+<span class="c1"># Ganti &#39;model&#39; dengan nama variabel model Anda</span>
+
+<span class="n">model_filename</span> <span class="o">=</span> <span class="s1">&#39;import_oil_model.pkl&#39;</span>
+
+<span class="c1"># Simpan model menggunakan pickle</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">model_filename</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Model berhasil disimpan dalam file: </span><span class="si">{</span><span class="n">model_filename</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model berhasil disimpan dalam file: import_oil_model.pkl
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hasil-deploy">
+<h2>Hasil Deploy<a class="headerlink" href="#hasil-deploy" title="Link to this heading">#</a></h2>
+<p>ini adalah hasil deploy untuk prediksi ini :
+<a class="reference external" href="https://huggingface.co/spaces/yudhanuurcahyo/psd_prediksi_tugas2">https://huggingface.co/spaces/yudhanuurcahyo/psd_prediksi_tugas2</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="TerbaruTugas1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Prediksi Pengunjung</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="TerbaruTugas3_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Prediction Suhu Udara</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset">Memuat dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-extract-date-information">Preprocessing: Extract Date Information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu">Membuat grafik time series untuk menunjukkan tren impor minyak dari waktu ke waktu.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis">Mengambil kolom nilai impor minyak dalam bentuk array numpy untuk digunakan dalam analisis.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">normalisasi data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
