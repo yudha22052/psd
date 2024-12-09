@@ -64,7 +64,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Prediction Suhu Udara" href="TerbaruTugas3_2.html" />
-    <link rel="prev" title="Prediksi Pengunjung" href="TerbaruTugas1.html" />
+    <link rel="prev" title="Prediksi Pengunjung perpustakan umum meulaboh" href="TerbaruTugas1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -169,7 +169,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas1.html">Prediksi Pengunjung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas1.html">Prediksi Pengunjung perpustakan umum meulaboh</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Oil Import Prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TerbaruTugas3_2.html">Prediction Suhu Udara</a></li>
 </ul>
@@ -359,19 +359,25 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset">Memuat dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-extract-date-information">Preprocessing: Extract Date Information</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu">Membuat grafik time series untuk menunjukkan tren impor minyak dari waktu ke waktu.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis">Mengambil kolom nilai impor minyak dalam bentuk array numpy untuk digunakan dalam analisis.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">normalisasi data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
 </ul>
             </nav>
@@ -400,8 +406,8 @@
 </div>
 </div>
 </div>
-<section id="memuat-dataset">
-<h2>Memuat dataset<a class="headerlink" href="#memuat-dataset" title="Link to this heading">#</a></h2>
+<section id="memahami-data-data-undertanding">
+<h2>Memahami Data ( Data Undertanding)<a class="headerlink" href="#memahami-data-data-undertanding" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -466,7 +472,7 @@
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-973ef19c-5252-49db-8bb7-42aa008f3ad1" class="colab-df-container">
+  <div id="df-b3b744ba-d4b9-435f-a6fb-f88e2e191824" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -552,7 +558,7 @@
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-973ef19c-5252-49db-8bb7-42aa008f3ad1')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b3b744ba-d4b9-435f-a6fb-f88e2e191824')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -604,12 +610,12 @@
 
     <script>
       const buttonEl =
-        document.querySelector('#df-973ef19c-5252-49db-8bb7-42aa008f3ad1 button.colab-df-convert');
+        document.querySelector('#df-b3b744ba-d4b9-435f-a6fb-f88e2e191824 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-973ef19c-5252-49db-8bb7-42aa008f3ad1');
+        const element = document.querySelector('#df-b3b744ba-d4b9-435f-a6fb-f88e2e191824');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -629,8 +635,8 @@
   </div>
 
 
-<div id="df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea">
-  <button class="colab-df-quickchart" onclick="quickchart('df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea')"
+<div id="df-48147d1f-0af3-453c-937a-2d32edd5faef">
+  <button class="colab-df-quickchart" onclick="quickchart('df-48147d1f-0af3-453c-937a-2d32edd5faef')"
             title="Suggest charts"
             style="display:none;">
 
@@ -749,14 +755,14 @@
     }
     (() => {
       let quickchartButtonEl =
-        document.querySelector('#df-d743c9f9-af8d-4cdb-8694-75bfe34e75ea button');
+        document.querySelector('#df-48147d1f-0af3-453c-937a-2d32edd5faef button');
       quickchartButtonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
     })();
   </script>
 </div>
 
-  <div id="id_73e0c051-5c02-40a0-965a-d7ed69416d40">
+  <div id="id_c0943ee7-525e-49a2-98aa-ac585eb2ad6a">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -800,7 +806,7 @@
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_73e0c051-5c02-40a0-965a-d7ed69416d40 button.colab-df-generate');
+        document.querySelector('#id_c0943ee7-525e-49a2-98aa-ac585eb2ad6a button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -816,11 +822,10 @@
 </div></div>
 </div>
 </section>
-<section id="preprocessing-extract-date-information">
-<h2>Preprocessing: Extract Date Information<a class="headerlink" href="#preprocessing-extract-date-information" title="Link to this heading">#</a></h2>
-</section>
+<section id="praproses-data-preprocessing-data">
+<h2>Praproses data ( Preprocessing data)<a class="headerlink" href="#praproses-data-preprocessing-data" title="Link to this heading">#</a></h2>
 <section id="mengubah-kolom-date-and-month-menjadi-format-datetime">
-<h2>Mengubah kolom Date and Month menjadi format datetime.<a class="headerlink" href="#mengubah-kolom-date-and-month-menjadi-format-datetime" title="Link to this heading">#</a></h2>
+<h3>Mengubah kolom Date and Month menjadi format datetime.<a class="headerlink" href="#mengubah-kolom-date-and-month-menjadi-format-datetime" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Preprocessing</span>
@@ -831,7 +836,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-6-01c4818ce047&gt;:2: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-5-01c4818ce047&gt;:2: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
   data[&#39;Date and Month&#39;] = pd.to_datetime(data[&#39;Date and Month&#39;])
 </pre></div>
 </div>
@@ -878,6 +883,7 @@ std       3.494001    3.482138
 </div>
 </div>
 <p>Menampilkan statistik deskriptif seperti rata-rata, nilai minimum, maksimum, dll., untuk kolom numerik dalam DataFrame.</p>
+</section>
 <section id="menghitung-jumlah-nilai-kosong">
 <h3>Menghitung jumlah nilai kosong<a class="headerlink" href="#menghitung-jumlah-nilai-kosong" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -1379,6 +1385,9 @@ Prediksi: [220957.29923959 235881.2075715  272571.19062021 235458.19489098
 <li><p>Mengukur kinerja model menggunakan Mean Squared Error (MSE).</p></li>
 </ul>
 </section>
+</section>
+<section id="modelling">
+<h2>Modelling<a class="headerlink" href="#modelling" title="Link to this heading">#</a></h2>
 <section id="melatih-model-baggingregressor">
 <h3>Melatih model BaggingRegressor<a class="headerlink" href="#melatih-model-baggingregressor" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
@@ -1803,8 +1812,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </section>
 </section>
+<section id="evaluasi">
+<h2>Evaluasi<a class="headerlink" href="#evaluasi" title="Link to this heading">#</a></h2>
 <section id="melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">
-<h2>melakukan uji coba pada model yang di latih untuk melakukan prediksi<a class="headerlink" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi" title="Link to this heading">#</a></h2>
+<h3>melakukan uji coba pada model yang di latih untuk melakukan prediksi<a class="headerlink" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred3</span> <span class="o">=</span> <span class="n">bagging_model3</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -1856,8 +1867,8 @@ MAPE: 4.87%
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)),</span> <span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Harga Asli&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred3</span><span class="p">)),</span> <span class="n">y_pred3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prediksi&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Indeks Data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Harga Bawang Merah&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Harga Asli dan Prediksi menggunakan Linear regression&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;jumlah import minyak&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan jumlah import dan Prediksi menggunakan Linear regression&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1865,7 +1876,7 @@ MAPE: 4.87%
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/823e410c653cc7e17039869aac152723ead7606b71009c115a748402e35addf4.png" src="_images/823e410c653cc7e17039869aac152723ead7606b71009c115a748402e35addf4.png" />
+<img alt="_images/a655feea4a16017a060597d63a5c6dd98231459844a7e725b63768152aa6c462.png" src="_images/a655feea4a16017a060597d63a5c6dd98231459844a7e725b63768152aa6c462.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1891,6 +1902,7 @@ MAPE: 4.87%
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="hasil-deploy">
 <h2>Hasil Deploy<a class="headerlink" href="#hasil-deploy" title="Link to this heading">#</a></h2>
@@ -1935,7 +1947,7 @@ MAPE: 4.87%
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prediksi Pengunjung</p>
+        <p class="prev-next-title">Prediksi Pengunjung perpustakan umum meulaboh</p>
       </div>
     </a>
     <a class="right-next"
@@ -1964,19 +1976,25 @@ MAPE: 4.87%
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memuat-dataset">Memuat dataset</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-extract-date-information">Preprocessing: Extract Date Information</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membuat-grafik-time-series-untuk-menunjukkan-tren-impor-minyak-dari-waktu-ke-waktu">Membuat grafik time series untuk menunjukkan tren impor minyak dari waktu ke waktu.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-kolom-nilai-impor-minyak-dalam-bentuk-array-numpy-untuk-digunakan-dalam-analisis">Mengambil kolom nilai impor minyak dalam bentuk array numpy untuk digunakan dalam analisis.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-data">normalisasi data</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
 </ul>
   </nav></div>

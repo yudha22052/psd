@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Prediksi Pengunjung &#8212; My sample book</title>
+    <title>Prediksi Pengunjung perpustakan umum meulaboh &#8212; My sample book</title>
   
   
   
@@ -169,7 +169,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prediksi Pengunjung</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prediksi Pengunjung perpustakan umum meulaboh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TerbaruTugas2.html">Oil Import Prediction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="TerbaruTugas3_2.html">Prediction Suhu Udara</a></li>
 </ul>
@@ -349,7 +349,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Prediksi Pengunjung</h1>
+    <h1>Prediksi Pengunjung perpustakan umum meulaboh</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,17 +359,25 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyiapkan-dan-memuat-data">Menyiapkan dan Memuat Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">visualisasi data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-dan-menghapus-outlier">mengidentifikasi dan menghapus outlier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-loess-smoothing">Melakukan LOESS smoothing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-setelah-di-hapus-outliernya">visualisasi data setelah di hapus outliernya</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasikan-data">Normalisasikan data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">visualisasi data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-dan-menghapus-outlier">mengidentifikasi dan menghapus outlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-loess-smoothing">Melakukan LOESS smoothing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-setelah-di-hapus-outliernya">visualisasi data setelah di hapus outliernya</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasikan-data">Normalisasikan data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
 </ul>
             </nav>
@@ -382,14 +390,21 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="prediksi-pengunjung">
-<h1>Prediksi Pengunjung<a class="headerlink" href="#prediksi-pengunjung" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="prediksi-pengunjung-perpustakan-umum-meulaboh">
+<h1>Prediksi Pengunjung perpustakan umum meulaboh<a class="headerlink" href="#prediksi-pengunjung-perpustakan-umum-meulaboh" title="Link to this heading">#</a></h1>
 <p>Nama: Yudha nuur cahyo</p>
 <p>NIM: 220411100052</p>
 <p>Mata Kuliah: Proyek sains Data</p>
-<p>Notebook ini bertujuan untuk membuat model prediksi jumlah pengunjung dengan menggunakan data historis jumlah pengunjung dalam beberapa hari terakhir. Model yang digunakan untuk prediksi kemungkinan besar adalah model pembelajaran mesin, seperti Bagging, dan hasil dari model tersebut disimpan dalam bentuk file .pkl untuk digunakan dalam prediksi yang akan datang.</p>
-<section id="menyiapkan-dan-memuat-data">
-<h2>Menyiapkan dan Memuat Data<a class="headerlink" href="#menyiapkan-dan-memuat-data" title="Link to this heading">#</a></h2>
+<p>Notebook ini bertujuan untuk membuat model prediksi jumlah pengunjung dengan menggunakan data historis jumlah pengunjung dalam beberapa hari terakhir. Model yang digunakan untuk prediksi adalah model pembelajaran mesin, seperti Bagging, dan hasil dari model tersebut disimpan dalam bentuk file .pkl yang digunakan untuk deploy.</p>
+<section id="memahami-data-data-undertanding">
+<h2>Memahami Data ( Data Undertanding)<a class="headerlink" href="#memahami-data-data-undertanding" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Dataset ini berisi informasi jumlah pengunjung perpustakaan per bulan yang mempunyai fitur kode_provinsi;provinsi;kode_kabupaten;kabupaten;tahun;bulan;jenis_pengunjung;jumlah_pengunjung;satuan.</p></li>
+<li><p>Data awalnya tidak terpisah dengan benar karena delimiter salah, tetapi sudah diperbaiki menggunakan parameter delimiter=’;’.</p></li>
+<li><p>Data difokuskan hanya pada dua kolom utama:</p></li>
+<li><p>Periode waktu (tahun_bulan).</p></li>
+<li><p>Jumlah pengunjung (jumlah_pengunjung).</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
@@ -498,8 +513,8 @@
 </div>
 </div>
 </section>
-<section id="menghitung-jumlah-nilai-kosong">
-<h2>Menghitung jumlah nilai kosong<a class="headerlink" href="#menghitung-jumlah-nilai-kosong" title="Link to this heading">#</a></h2>
+<section id="praproses-data-preprocessing-data">
+<h2>Praproses data ( Preprocessing data)<a class="headerlink" href="#praproses-data-preprocessing-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data_filtered</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
@@ -514,9 +529,8 @@ dtype: int64
 </div>
 </div>
 </div>
-</section>
 <section id="visualisasi-data">
-<h2>visualisasi data<a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h2>
+<h3>visualisasi data<a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -537,7 +551,7 @@ dtype: int64
 <p>dari visualisasi data di atas terlihat masih memiliki banyak outlier maka say akan melakukan penghapusan outlier</p>
 </section>
 <section id="mengidentifikasi-dan-menghapus-outlier">
-<h2>mengidentifikasi dan menghapus outlier<a class="headerlink" href="#mengidentifikasi-dan-menghapus-outlier" title="Link to this heading">#</a></h2>
+<h3>mengidentifikasi dan menghapus outlier<a class="headerlink" href="#mengidentifikasi-dan-menghapus-outlier" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">zscore</span>
@@ -551,7 +565,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-7-f2ad66d24551&gt;:4: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-6-f2ad66d24551&gt;:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -564,7 +578,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <p>kode di atas digunakan untuk mengidentifikasi dan menghapus outlier dari dataset berdasarkan nilai Z-Score, dengan asumsi bahwa nilai data yang memiliki Z-Score lebih dari 3 atau kurang dari -3 adalah outlier. Proses ini membantu membersihkan data agar model yang dilatih tidak dipengaruhi oleh nilai-nilai ekstrem yang dapat mengganggu hasil analisis atau prediksi.</p>
 </section>
 <section id="melakukan-loess-smoothing">
-<h2>Melakukan LOESS smoothing<a class="headerlink" href="#melakukan-loess-smoothing" title="Link to this heading">#</a></h2>
+<h3>Melakukan LOESS smoothing<a class="headerlink" href="#melakukan-loess-smoothing" title="Link to this heading">#</a></h3>
 <p>LOESS smoothing (Local Regression Smoothing) adalah metode untuk memperhalus data yang berfluktuasi atau bergelombang, dengan tujuan untuk mendapatkan tren atau pola yang lebih jelas, menghilangkan kebisingan (noise), dan menyajikan data dalam bentuk yang lebih mudah dianalisis atau diprediksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -586,7 +600,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </section>
 <section id="visualisasi-data-setelah-di-hapus-outliernya">
-<h2>visualisasi data setelah di hapus outliernya<a class="headerlink" href="#visualisasi-data-setelah-di-hapus-outliernya" title="Link to this heading">#</a></h2>
+<h3>visualisasi data setelah di hapus outliernya<a class="headerlink" href="#visualisasi-data-setelah-di-hapus-outliernya" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.tsa.arima.model</span> <span class="kn">import</span> <span class="n">ARIMA</span>
@@ -628,7 +642,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 </section>
 <section id="melakukan-sliding-window">
-<h2>melakukan sliding window<a class="headerlink" href="#melakukan-sliding-window" title="Link to this heading">#</a></h2>
+<h3>melakukan sliding window<a class="headerlink" href="#melakukan-sliding-window" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Import numpy library and give it alias &#39;np&#39;</span>
@@ -764,7 +778,7 @@ y: [65 46 50 67 71 80 74 57 35 45 41 39 56 42 49 51 45 47 34 40 33 50 51 61
 </div>
 </section>
 <section id="normalisasikan-data">
-<h2>Normalisasikan data<a class="headerlink" href="#normalisasikan-data" title="Link to this heading">#</a></h2>
+<h3>Normalisasikan data<a class="headerlink" href="#normalisasikan-data" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">MinMaxScaler</span>
@@ -794,7 +808,7 @@ Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3
 </div>
 </section>
 <section id="membagi-data-menjadi-set-latih-dan-uji">
-<h2>Membagi data menjadi set latih dan uji<a class="headerlink" href="#membagi-data-menjadi-set-latih-dan-uji" title="Link to this heading">#</a></h2>
+<h3>Membagi data menjadi set latih dan uji<a class="headerlink" href="#membagi-data-menjadi-set-latih-dan-uji" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1"># Import the train_test_split function</span>
@@ -821,8 +835,11 @@ Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3
 </div>
 </div>
 </section>
+</section>
+<section id="modelling">
+<h2>Modelling<a class="headerlink" href="#modelling" title="Link to this heading">#</a></h2>
 <section id="melatih-model-baggingregressor">
-<h2>Melatih model BaggingRegressor<a class="headerlink" href="#melatih-model-baggingregressor" title="Link to this heading">#</a></h2>
+<h3>Melatih model BaggingRegressor<a class="headerlink" href="#melatih-model-baggingregressor" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#membuat model dengan decision tree</span>
@@ -1245,24 +1262,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>BaggingRegressor(estimator=DecisionTreeRegressor(), random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" ><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;BaggingRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.ensemble.BaggingRegressor.html">?<span>Documentation for BaggingRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>BaggingRegressor(estimator=DecisionTreeRegressor(), random_state=42)</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" ><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">estimator: DecisionTreeRegressor</label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor()</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" ><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;DecisionTreeRegressor<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.5/modules/generated/sklearn.tree.DecisionTreeRegressor.html">?<span>Documentation for DecisionTreeRegressor</span></a></label><div class="sk-toggleable__content fitted"><pre>DecisionTreeRegressor()</pre></div> </div></div></div></div></div></div></div></div></div></div></div>
 </div>
 </section>
-<section id="melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">
-<h2>melakukan uji coba pada model yang di latih untuk melakukan prediksi<a class="headerlink" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span> <span class="c1"># Import the pickle module</span>
-
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bagging_model2.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">bagging_model2</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model berhasil disimpan sebagai &#39;bagging_model2.pkl&#39;.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model berhasil disimpan sebagai &#39;bagging_model2.pkl&#39;.
-</pre></div>
-</div>
-</div>
-</div>
+</section>
+<section id="evaluasi">
+<h2>Evaluasi<a class="headerlink" href="#evaluasi" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
@@ -1292,11 +1294,11 @@ MAPE: 20.746369614266555
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)),</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Harga Asli(testing)&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)),</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;jumlah pengunjung(testing)&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_pred2</span><span class="p">)),</span> <span class="n">y_pred2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Prediksi&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Indeks Data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Harga Bawang Merah&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Harga Asli dan Prediksi menggunakan decision tree&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Pengunjung&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan jumlah pengunjung dan Prediksi menggunakan decision tree&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1304,9 +1306,11 @@ MAPE: 20.746369614266555
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/5788f223952cd07f0a818f1461124c0bbe62406dbfe9d91742cc5a8d763ecb93.png" src="_images/5788f223952cd07f0a818f1461124c0bbe62406dbfe9d91742cc5a8d763ecb93.png" />
+<img alt="_images/fc12a3f3c0643153d3019f6e87df8eb33789df76816504530617b811f5ba2fb2.png" src="_images/fc12a3f3c0643153d3019f6e87df8eb33789df76816504530617b811f5ba2fb2.png" />
 </div>
 </div>
+<section id="melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">
+<h3>melakukan uji coba pada model yang di latih untuk melakukan prediksi<a class="headerlink" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">prices</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]])</span>  <span class="c1"># Mengambil 3 hari terakhir</span>
@@ -1323,6 +1327,23 @@ MAPE: 20.746369614266555
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span> <span class="c1"># Import the pickle module</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bagging_model2.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">bagging_model2</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model berhasil disimpan sebagai &#39;bagging_model2.pkl&#39;.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model berhasil disimpan sebagai &#39;bagging_model2.pkl&#39;.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="hasil-deploy">
 <h2>Hasil Deploy<a class="headerlink" href="#hasil-deploy" title="Link to this heading">#</a></h2>
@@ -1396,17 +1417,25 @@ MAPE: 20.746369614266555
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menyiapkan-dan-memuat-data">Menyiapkan dan Memuat Data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jumlah-nilai-kosong">Menghitung jumlah nilai kosong</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">visualisasi data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-dan-menghapus-outlier">mengidentifikasi dan menghapus outlier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-loess-smoothing">Melakukan LOESS smoothing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-setelah-di-hapus-outliernya">visualisasi data setelah di hapus outliernya</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasikan-data">Normalisasikan data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">visualisasi data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-dan-menghapus-outlier">mengidentifikasi dan menghapus outlier</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-loess-smoothing">Melakukan LOESS smoothing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data-setelah-di-hapus-outliernya">visualisasi data setelah di hapus outliernya</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-sliding-window">melakukan sliding window</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasikan-data">Normalisasikan data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membagi-data-menjadi-set-latih-dan-uji">Membagi data menjadi set latih dan uji</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelling">Modelling</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melatih-model-baggingregressor">Melatih model BaggingRegressor</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi">Evaluasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melakukan-uji-coba-pada-model-yang-di-latih-untuk-melakukan-prediksi">melakukan uji coba pada model yang di latih untuk melakukan prediksi</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-deploy">Hasil Deploy</a></li>
 </ul>
   </nav></div>
