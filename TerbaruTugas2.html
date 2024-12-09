@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Oil Import Prediction &#8212; My sample book</title>
+    <title>Project II &#8212; My sample book</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'TerbaruTugas2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Prediction Suhu Udara" href="TerbaruTugas3_2.html" />
-    <link rel="prev" title="Prediksi Pengunjung perpustakan umum meulaboh" href="TerbaruTugas1.html" />
+    <link rel="next" title="Project III" href="TerbaruTugas3_2.html" />
+    <link rel="prev" title="Project I" href="TerbaruTugas1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -169,9 +169,9 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas1.html">Prediksi Pengunjung perpustakan umum meulaboh</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Oil Import Prediction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas3_2.html">Prediction Suhu Udara</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas1.html">Project I</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TerbaruTugas3_2.html">Project III</a></li>
 </ul>
 
     </div>
@@ -349,7 +349,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Oil Import Prediction</h1>
+    <h1>Project II</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,6 +359,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujauan-analisis-business-understanding">Tujauan analisis ( Business Understanding)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a></li>
@@ -390,11 +391,13 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="oil-import-prediction">
-<h1>Oil Import Prediction<a class="headerlink" href="#oil-import-prediction" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="project-ii">
+<h1>Project II<a class="headerlink" href="#project-ii" title="Link to this heading">#</a></h1>
 <p>Nama: Yudha nuur cahyo</p>
 <p>NIM: 220411100052</p>
 <p>Mata Kuliah: Proyek sains Data</p>
+<section id="tujauan-analisis-business-understanding">
+<h2>Tujauan analisis ( Business Understanding)<a class="headerlink" href="#tujauan-analisis-business-understanding" title="Link to this heading">#</a></h2>
 <p>Notebook ini berisi proses analisis data time series untuk memprediksi impor minyak dunia ke Amerika Serikat menggunakan model Bagging Regressor dengan Linear Regression sebagai estimasi dasar. Proses dimulai dengan mengimpor pustaka yang dibutuhkan seperti numpy, pandas, matplotlib, dan sklearn, diikuti dengan membaca dataset impor minyak.</p>
 <p>Langkah berikutnya adalah melakukan preprocessing data dengan mengonversi kolom tanggal ke format datetime, menambahkan kolom tahun dan bulan, serta memvisualisasikan data time series untuk memahami pola tren. Data kemudian diolah menggunakan metode sliding window untuk membentuk data input (X) dan target (y), di mana 4 data terakhir digunakan untuk memprediksi data berikutnya.</p>
 <p>Selanjutnya, data dinormalisasi menggunakan MinMaxScaler untuk memastikan nilai berada dalam rentang 0 hingga 1. Model dilatih menggunakan Bagging Regressor dengan Linear Regression sebagai estimator dasar, dan dilakukan evaluasi terhadap model menggunakan metrik seperti Mean Squared Error (MSE), Root Mean Squared Error (RMSE), dan Mean Absolute Percentage Error (MAPE).</p>
@@ -406,6 +409,7 @@
 </div>
 </div>
 </div>
+</section>
 <section id="memahami-data-data-undertanding">
 <h2>Memahami Data ( Data Undertanding)<a class="headerlink" href="#memahami-data-data-undertanding" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -1947,7 +1951,7 @@ MAPE: 4.87%
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prediksi Pengunjung perpustakan umum meulaboh</p>
+        <p class="prev-next-title">Project I</p>
       </div>
     </a>
     <a class="right-next"
@@ -1955,7 +1959,7 @@ MAPE: 4.87%
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Prediction Suhu Udara</p>
+        <p class="prev-next-title">Project III</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1976,6 +1980,7 @@ MAPE: 4.87%
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujauan-analisis-business-understanding">Tujauan analisis ( Business Understanding)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#memahami-data-data-undertanding">Memahami Data ( Data Undertanding)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#praproses-data-preprocessing-data">Praproses data ( Preprocessing data)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengubah-kolom-date-and-month-menjadi-format-datetime">Mengubah kolom Date and Month menjadi format datetime.</a></li>
